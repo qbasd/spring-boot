@@ -1,0 +1,135 @@
+2023-07-10 15:50:49.048  INFO 20736 --- [main] c.e.s.SpringbootTestApplication          : Starting SpringbootTestApplication using Java 1.8.0_212 on DESKTOP-6C7DB78 with PID 20736 (F:\Developer\java教程\JavaEE\Springboot\SpringbootTest\target\classes started by JayHsu in F:\Developer\java教程\JavaEE\Springboot\SpringbootTest)
+2023-07-10 15:50:49.050  INFO 20736 --- [main] c.e.s.SpringbootTestApplication          : The following profiles are active: dev
+2023-07-10 15:50:50.321  INFO 20736 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2023-07-10 15:50:50.335  INFO 20736 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-07-10 15:50:50.335  INFO 20736 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.56]
+2023-07-10 15:50:50.383  INFO 20736 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-07-10 15:50:50.383  INFO 20736 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1259 ms
+2023-07-10 15:50:50.643  INFO 20736 --- [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2023-07-10 15:50:50.843  INFO 20736 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@784abd3e, org.springframework.security.web.context.SecurityContextPersistenceFilter@1a2bcd56, org.springframework.security.web.header.HeaderWriterFilter@5460b754, org.springframework.security.web.csrf.CsrfFilter@55e42449, org.springframework.security.web.authentication.logout.LogoutFilter@a451491, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@5a6fa56e, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@59dc36d4, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@56a4f272, org.springframework.security.web.authentication.rememberme.RememberMeAuthenticationFilter@53f4c1e6, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@36c2b646, org.springframework.security.web.session.SessionManagementFilter@c27a3a2, org.springframework.security.web.access.ExceptionTranslationFilter@277b8fa4, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@5dd903be]
+2023-07-10 15:50:50.886  INFO 20736 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2023-07-10 15:50:50.893  INFO 20736 --- [main] c.e.s.SpringbootTestApplication          : Started SpringbootTestApplication in 2.254 seconds (JVM running for 2.759)
+2023-07-10 15:50:53.580  INFO 20736 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-07-10 15:50:53.580  INFO 20736 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2023-07-10 15:50:53.581  INFO 20736 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2023-07-10 15:50:53.599  INFO 20736 --- [http-nio-8080-exec-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2023-07-10 15:50:54.187  INFO 20736 --- [http-nio-8080-exec-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2023-07-10 15:51:00.490 ERROR 20736 --- [http-nio-8080-exec-2] o.a.c.c.C.[.[.[/].[dispatcherServlet]    : Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception
+
+org.springframework.security.web.authentication.rememberme.CookieTheftException: Invalid remember-me token (Series/token) mismatch. Implies previous cookie theft attack.
+	at org.springframework.security.web.authentication.rememberme.PersistentTokenBasedRememberMeServices.processAutoLoginCookie(PersistentTokenBasedRememberMeServices.java:113)
+	at org.springframework.security.web.authentication.rememberme.AbstractRememberMeServices.autoLogin(AbstractRememberMeServices.java:136)
+	at org.springframework.security.web.authentication.rememberme.RememberMeAuthenticationFilter.doFilter(RememberMeAuthenticationFilter.java:105)
+	at org.springframework.security.web.authentication.rememberme.RememberMeAuthenticationFilter.doFilter(RememberMeAuthenticationFilter.java:93)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336)
+	at org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter.doFilter(SecurityContextHolderAwareRequestFilter.java:149)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336)
+	at org.springframework.security.web.savedrequest.RequestCacheAwareFilter.doFilter(RequestCacheAwareFilter.java:63)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336)
+	at org.springframework.security.web.authentication.AbstractAuthenticationProcessingFilter.doFilter(AbstractAuthenticationProcessingFilter.java:219)
+	at org.springframework.security.web.authentication.AbstractAuthenticationProcessingFilter.doFilter(AbstractAuthenticationProcessingFilter.java:213)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336)
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:103)
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:89)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336)
+	at org.springframework.security.web.csrf.CsrfFilter.doFilterInternal(CsrfFilter.java:117)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336)
+	at org.springframework.security.web.header.HeaderWriterFilter.doHeadersAfter(HeaderWriterFilter.java:90)
+	at org.springframework.security.web.header.HeaderWriterFilter.doFilterInternal(HeaderWriterFilter.java:75)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336)
+	at org.springframework.security.web.context.SecurityContextPersistenceFilter.doFilter(SecurityContextPersistenceFilter.java:110)
+	at org.springframework.security.web.context.SecurityContextPersistenceFilter.doFilter(SecurityContextPersistenceFilter.java:80)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336)
+	at org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter.doFilterInternal(WebAsyncManagerIntegrationFilter.java:55)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336)
+	at org.springframework.security.web.FilterChainProxy.doFilterInternal(FilterChainProxy.java:211)
+	at org.springframework.security.web.FilterChainProxy.doFilter(FilterChainProxy.java:183)
+	at org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:354)
+	at org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:267)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:197)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:540)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:135)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:357)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:382)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:895)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1732)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:748)
+
+2023-07-10 15:51:00.544  INFO 20736 --- [http-nio-8080-exec-3] c.e.s.controller.MainController          : 有人访问了页面！
+2023-07-10 16:09:47.440  INFO 20736 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2023-07-10 16:09:47.446  INFO 20736 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2023-07-10 16:09:52.152  INFO 8944 --- [main] c.e.s.SpringbootTestApplication          : Starting SpringbootTestApplication using Java 1.8.0_212 on DESKTOP-6C7DB78 with PID 8944 (F:\Developer\java教程\JavaEE\Springboot\SpringbootTest\target\classes started by JayHsu in F:\Developer\java教程\JavaEE\Springboot\SpringbootTest)
+2023-07-10 16:09:52.154  INFO 8944 --- [main] c.e.s.SpringbootTestApplication          : The following profiles are active: dev
+2023-07-10 16:09:52.824  INFO 8944 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2023-07-10 16:09:52.829  INFO 8944 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-07-10 16:09:52.830  INFO 8944 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.56]
+2023-07-10 16:09:52.875  INFO 8944 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-07-10 16:09:52.875  INFO 8944 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 690 ms
+2023-07-10 16:09:53.139  INFO 8944 --- [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2023-07-10 16:09:53.334  INFO 8944 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@1a22e0ef, org.springframework.security.web.context.SecurityContextPersistenceFilter@3204e238, org.springframework.security.web.header.HeaderWriterFilter@16727bf0, org.springframework.security.web.csrf.CsrfFilter@50fb33a, org.springframework.security.web.authentication.logout.LogoutFilter@423b2b62, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@4acb7ecc, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@a5272be, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@10b1a751, org.springframework.security.web.authentication.rememberme.RememberMeAuthenticationFilter@29149030, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@67514bdd, org.springframework.security.web.session.SessionManagementFilter@291373d3, org.springframework.security.web.access.ExceptionTranslationFilter@250a500b, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@7ab34619]
+2023-07-10 16:09:53.376  INFO 8944 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2023-07-10 16:09:53.385  INFO 8944 --- [main] c.e.s.SpringbootTestApplication          : Started SpringbootTestApplication in 1.579 seconds (JVM running for 2.067)
+2023-07-10 16:10:44.275  INFO 5536 --- [main] c.e.s.SpringbootTestApplication          : Starting SpringbootTestApplication using Java 1.8.0_212 on DESKTOP-6C7DB78 with PID 5536 (F:\Developer\java教程\JavaEE\Springboot\SpringbootTest\target\classes started by JayHsu in F:\Developer\java教程\JavaEE\Springboot\SpringbootTest)
+2023-07-10 16:10:44.278  INFO 5536 --- [main] c.e.s.SpringbootTestApplication          : The following profiles are active: dev
+2023-07-10 16:10:45.089  INFO 5536 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2023-07-10 16:10:45.095  INFO 5536 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-07-10 16:10:45.095  INFO 5536 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.56]
+2023-07-10 16:10:45.146  INFO 5536 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-07-10 16:10:45.146  INFO 5536 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 821 ms
+2023-07-10 16:10:45.452  INFO 5536 --- [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2023-07-10 16:10:45.694  INFO 5536 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@67514bdd, org.springframework.security.web.context.SecurityContextPersistenceFilter@38ed139b, org.springframework.security.web.header.HeaderWriterFilter@2f84acf7, org.springframework.security.web.csrf.CsrfFilter@2cae9b8, org.springframework.security.web.authentication.logout.LogoutFilter@2b7962a2, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@2a4f5433, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@58ba5b30, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@53cf9c99, org.springframework.security.web.authentication.rememberme.RememberMeAuthenticationFilter@38b8b6c0, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@3b920bdc, org.springframework.security.web.session.SessionManagementFilter@372ca2d6, org.springframework.security.web.access.ExceptionTranslationFilter@75d982d3, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@ae2db25]
+2023-07-10 16:10:45.745  INFO 5536 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2023-07-10 16:10:45.756  INFO 5536 --- [main] c.e.s.SpringbootTestApplication          : Started SpringbootTestApplication in 2.014 seconds (JVM running for 2.59)
+2023-07-10 16:23:15.698  INFO 14352 --- [main] c.e.s.SpringbootTestApplication          : Starting SpringbootTestApplication using Java 1.8.0_212 on DESKTOP-6C7DB78 with PID 14352 (F:\Developer\java教程\JavaEE\Springboot\SpringbootTest\target\classes started by JayHsu in F:\Developer\java教程\JavaEE\Springboot\SpringbootTest)
+2023-07-10 16:23:15.700  INFO 14352 --- [main] c.e.s.SpringbootTestApplication          : The following profiles are active: dev
+2023-07-10 16:23:16.470  INFO 14352 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2023-07-10 16:23:16.477  INFO 14352 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-07-10 16:23:16.477  INFO 14352 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.56]
+2023-07-10 16:23:16.528  INFO 14352 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-07-10 16:23:16.528  INFO 14352 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 794 ms
+2023-07-10 16:23:16.858  INFO 14352 --- [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2023-07-10 16:23:17.088  INFO 14352 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@33ec2c0c, org.springframework.security.web.context.SecurityContextPersistenceFilter@39266403, org.springframework.security.web.header.HeaderWriterFilter@b768a65, org.springframework.security.web.csrf.CsrfFilter@4c38cd16, org.springframework.security.web.authentication.logout.LogoutFilter@3a11c0eb, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@6f38f084, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@2aa14ae6, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@3af10d0b, org.springframework.security.web.authentication.rememberme.RememberMeAuthenticationFilter@372f0a99, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@5968800d, org.springframework.security.web.session.SessionManagementFilter@6986f93e, org.springframework.security.web.access.ExceptionTranslationFilter@233f52f8, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@2322e56f]
+2023-07-10 16:23:17.131  INFO 14352 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2023-07-10 16:27:29.270  INFO 14352 --- [main] c.e.s.SpringbootTestApplication          : Started SpringbootTestApplication in 253.938 seconds (JVM running for 254.951)
+2023-07-10 16:35:29.027  INFO 14552 --- [main] c.e.s.SpringbootTestApplication          : Starting SpringbootTestApplication using Java 1.8.0_212 on DESKTOP-6C7DB78 with PID 14552 (F:\Developer\java教程\JavaEE\Springboot\SpringbootTest\target\classes started by JayHsu in F:\Developer\java教程\JavaEE\Springboot\SpringbootTest)
+2023-07-10 16:35:29.029  INFO 14552 --- [main] c.e.s.SpringbootTestApplication          : The following profiles are active: dev
+2023-07-10 16:35:30.040  INFO 14552 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2023-07-10 16:35:30.046  INFO 14552 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-07-10 16:35:30.046  INFO 14552 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.56]
+2023-07-10 16:35:30.092  INFO 14552 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-07-10 16:35:30.092  INFO 14552 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1019 ms
+2023-07-10 16:35:30.363  INFO 14552 --- [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2023-07-10 16:35:30.558  INFO 14552 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@68ab0936, org.springframework.security.web.context.SecurityContextPersistenceFilter@3c3a0032, org.springframework.security.web.header.HeaderWriterFilter@79b84841, org.springframework.security.web.csrf.CsrfFilter@77774571, org.springframework.security.web.authentication.logout.LogoutFilter@524a076e, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@bc042d5, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@7fdab70c, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@1422ac7f, org.springframework.security.web.authentication.rememberme.RememberMeAuthenticationFilter@7efb53af, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@3cd9aa64, org.springframework.security.web.session.SessionManagementFilter@3c87e6b7, org.springframework.security.web.access.ExceptionTranslationFilter@3bbf841e, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@784abd3e]
+2023-07-10 16:35:30.598  INFO 14552 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2023-07-10 16:35:30.605  INFO 14552 --- [main] c.e.s.SpringbootTestApplication          : Started SpringbootTestApplication in 2.1 seconds (JVM running for 2.894)
+2023-07-10 16:35:34.750  INFO 14552 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-07-10 16:35:34.750  INFO 14552 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2023-07-10 16:35:34.751  INFO 14552 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2023-07-10 16:35:34.781  INFO 14552 --- [http-nio-8080-exec-1] c.e.s.controller.MainController          : 有人访问了页面！
+2023-07-10 17:47:38.432  INFO 22508 --- [main] c.e.s.SpringbootTestApplication          : Starting SpringbootTestApplication using Java 1.8.0_212 on DESKTOP-6C7DB78 with PID 22508 (F:\Developer\java教程\JavaEE\Springboot\SpringbootTest\target\classes started by JayHsu in F:\Developer\java教程\JavaEE\Springboot\SpringbootTest)
+2023-07-10 17:47:38.434  INFO 22508 --- [main] c.e.s.SpringbootTestApplication          : The following profiles are active: dev
